@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react"
 import { useAuth } from "../context/hooks/useAuth"
 import "../styles/Navbar.css"
+import logo1 from "../assets/logo1.png" // Make sure to add your logo image in the assets folder
 
 const Navbar = () => {
   const { currentUser, logout, deleteAccount } = useAuth()
@@ -39,9 +40,18 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo">
-          <h1>Algo Root</h1>
+          <img 
+            src={logo1} 
+            alt="AlgoRoot Logo" 
+            className="navbar-logo-icon" 
+          />
+          <h1>
+            <span className="logo-algo">Algo</span>
+            <span className="logo-root">Root</span>
+          </h1>
         </div>
 
+        {/* Rest of the component remains the same */}
         <div className="navbar-user" ref={dropdownRef}>
           <button className="user-button" onClick={() => setDropdownOpen(!dropdownOpen)} aria-label="User menu">
             <div className="user-avatar">{currentUser?.name?.charAt(0) || "U"}</div>
@@ -100,4 +110,3 @@ const Navbar = () => {
 }
 
 export default Navbar
-

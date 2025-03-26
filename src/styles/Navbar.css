@@ -1,28 +1,52 @@
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-  }
-  
-  .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    padding: 0 20px;
-  }
-  
-  .navbar-logo h1 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #4a6cf7;
-    margin: 0;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-logo-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.navbar-logo h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.logo-algo {
+  color: #4a6cf7;
+}
+
+.logo-root {
+  color: #2ecc71; /* A nice green color that complements the blue */
+}
+
+
+/* Rest of the CSS remains the same as in the previous version */
   
   .navbar-user {
     position: relative;
